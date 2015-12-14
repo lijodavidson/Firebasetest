@@ -58,6 +58,7 @@ public class creatuser extends AppCompatActivity {
                         Map<String, Object> map = new HashMap<String, Object>();
                         map.put("name", crt_email);
                         map.put("uid",result.get("uid"));
+
                         postRef.push().setValue(map);
 
 

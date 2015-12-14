@@ -27,6 +27,7 @@ public class login extends AppCompatActivity {
     private Button regbutton;
     private Button usr;
     private Button ctr;
+    private Button ass;
     private CoordinatorLayout coordinatorLayout;
    /* private ProgressDialog proloading;*/
 
@@ -40,9 +41,10 @@ public class login extends AppCompatActivity {
         editTextname=(EditText)findViewById(R.id.name);
         editTextemail=(EditText)findViewById(R.id.mail);
         editTextpassword=(EditText)findViewById(R.id.password);
-regbutton=(Button)findViewById(R.id.registerbutton);
+        regbutton=(Button)findViewById(R.id.registerbutton);
         usr=(Button)findViewById(R.id.usr);
         ctr=(Button)findViewById(R.id.createuser);
+        ass=(Button)findViewById(R.id.ASS);
       /*  proloading=(ProgressDialog)findViewById(R.id.loading);*/
 
 
@@ -153,6 +155,21 @@ usr.setOnClickListener(new View.OnClickListener() {
 
     }
 });
+
+
+
+
+        ass.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+
+                Intent myIntent = new Intent(login.this, Asyn.class);
+                login.this.startActivity(myIntent);
+
+
+            }
+        });
 
 
 

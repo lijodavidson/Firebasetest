@@ -30,6 +30,10 @@
             android:name=".creatuser"
             android:label="@string/title_activity_creatuser" >
         </activity>
+        <activity
+            android:name=".Asyn"
+            android:label="@string/title_activity_asyn" >
+        </activity>
     </application>
 
 </manifest>

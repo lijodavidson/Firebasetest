@@ -5,4 +5,14 @@
         <!-- Customize your theme here. -->
     </style>
 
+
+    <style name="AppCompatAlertDialogStyle" parent="Theme.AppCompat.Light.Dialog.Alert">
+
+        <item name="android:textColorPrimary">#5c5c5c</item>
+        <item name="android:background">#fdfdfe</item>
+
+    </style>
+
 </resources>
+
+

@@ -49,6 +49,39 @@ public class usr extends AppCompatActivity {
 
 
 
+                Firebase ref = new Firebase("https://clovers.firebaseio.com");
+
+// Create a handler to handle the result of the authentication
+                Firebase.AuthResultHandler authResultHandler = new Firebase.AuthResultHandler() {
+                    @Override
+                    public void onAuthenticated(AuthData authData) {
+                        // Authenticated successfully with payload authData
+                        Toast.makeText(getApplicationContext(), "Authenticated successfully", Toast.LENGTH_SHORT).show();
+
+                    }
+
+                    @Override
+                    public void onAuthenticationError(FirebaseError firebaseError) {
+                        // Authenticated failed with error firebaseError
+
+                    }
+                };
+
+
+                // Or with an email/password combination
+                ref.authWithPassword(login_email, login_password, authResultHandler);
+
+
+/*// Authenticate users with a custom Firebase token
+                ref.authWithCustomToken("<token>", authResultHandler);*/
+
+/*// Alternatively, authenticate users anonymously
+                ref.authAnonymously(authResultHandler);*/
+
+
+
+/*// Or via popular OAuth providers ("facebook", "github", "google", or "twitter")
+                ref.authWithOAuthToken("<provider>", "<oauth-token>", authResultHandler);*/
 
 
 
@@ -56,22 +89,20 @@ public class usr extends AppCompatActivity {
 
 
                /* Firebase ref = new Firebase("https://clovers.firebaseio.com");*/
-
-                final Firebase ref = new Firebase("https://clovers.firebaseio.com");
-
-                ref.authWithPassword(login_email, login_password,
+                /*final Firebase ref = new Firebase("https://clovers.firebaseio.com");*/
+                /*ref.authWithPassword(login_email, login_password,
                         new Firebase.AuthResultHandler() {
 
                             @Override
                             public void onAuthenticated(AuthData authData) {
                                 // Authentication just completed successfully :)
-                               /* Map<String, String> map = new HashMap<String, String>();
+                               *//* Map<String, String> map = new HashMap<String, String>();
                                 map.put("provider", authData.getProvider());
                                 if(authData.getProviderData().containsKey("displayName")) {
-                                    map.put("displayName", authData.getProviderData().get("displayName").toString());
+                                    map.put("displayName", authData.getProviderData().get("displayName").toString());     //login user and save the details into db
                                 }
 
-                                ref.child("users").child(authData.getUid()).setValue(map);*/
+                                ref.child("users").child(authData.getUid()).setValue(map);*//*
                             }
 
                             @Override
@@ -80,7 +111,7 @@ public class usr extends AppCompatActivity {
                                 Toast.makeText(getApplicationContext(), "something went wrong", Toast.LENGTH_SHORT).show();
 
                             }
-                        });
+                        });*/
 
 
 

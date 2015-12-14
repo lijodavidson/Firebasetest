@@ -6,4 +6,5 @@
     <string name="title_activity_landing">landing</string>
     <string name="title_activity_usr">usr</string>
     <string name="title_activity_creatuser">creatuser</string>
+    <string name="title_activity_asyn">Asyn</string>
 </resources>
